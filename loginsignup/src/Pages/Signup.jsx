@@ -1,11 +1,12 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import {Link} from 'react-router-dom';
 
 
 export function Signup() {
 return (
-    <div>
-        
-     <h1>Sign up!</h1>
+    <>
+        <h1>Welcome to the Sign Up Page</h1>
+     <h2>Sign up and create an account</h2>
      <Formik
        initialValues={{ email: '', password: '', 'First Name': '', 'Middle Name': '', 'Last Name': '', 'confirm password': '' , 'phone number': '', 'country': '', 'city': '', 'postal code': '', 'address line 1': '', 'address line 2': '' }}
        validate={values => {
@@ -107,11 +108,11 @@ return (
 
 
            <button type="submit" disabled={isSubmitting}>
-             Submit
+             Sign Up
            </button>
          </Form>
        )}
      </Formik>
-   </div>
+   </>
   )
 }
